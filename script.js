@@ -1,0 +1,1 @@
+let tempMin, tempMax, probaPluie, heuresSoleil;
