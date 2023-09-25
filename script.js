@@ -20,9 +20,9 @@ function remplirChamps()
 //Vide les champs sur appui du bouton Effacer
 function viderChamps()
 {
-    chTempMin.textContent = "°C";
-    chTempMax.textContent = "°C";
-    chProbaPluie.textContent = "%";
-    chHeuresSoleil.textContent = "h";
+    chTempMin.textContent = "";
+    chTempMax.textContent = "";
+    chProbaPluie.textContent = "";
+    chHeuresSoleil.textContent = "";
     tempMin, tempMax, probaPluie, heuresSoleil = "";
 }
