@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <title>Instant Weather</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Météo</h1>
+    </header>
+    <form>
+        <div class=bouton>
+            <button id=boutonValider>
+
+            </button>
+            <button id=boutonEffacer>
+
+            </button>
+        </div>
+        <div class=température>
+            <p id=inputTempMin>
+                Temperature minimale :
+                <input type="text" readonly>
+            </p>
+            <p id=inputTempMax>
+                Temperature maximale :
+                <input type="text" readonly>
+            </p>
+        </div>
+        <div class=Pluie>
+            <p id=inputProbaPluie>
+                Probabilité de pluie :
+                <input type="text" readonly>
+            </p>
+        </div>
+        <div class=Soleil>
+            <p id=inputHeuresSoleil>
+                Ensoleillement :
+                <input type="text" readonly>
+            </p>
+        </div>
+    </form>
+    <script src="script.js"></script>
 </body>
+
 </html>
