@@ -4,7 +4,7 @@ let chTempMax = document.getElementById("inputTempMax")
 let chProbaPluie = document.getElementById("inputProbaPluie");
 let chHeuresSoleil = document.getElementById("inputHeuresSoleil");
 
-function updateFields()
+function remplirChamps()
 {
     chTempMin.textContent = tempMin + " °C";
     chTempMax.textContent = tempMax + " °C";
