@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instant Weather</title>
     <link rel = "stylesheet" href = "style.css"/> 
+    <title>Instant Weather</title>
 </head>
 <body>
     <header>
         <h1>Météo</h1>
     </header>
-    
-
-    
+    <div class = bouton>
+        <button id = boutonValider readonly = readonly>
+        </button> 
+    </div>
+    <div class = température >
+        <p id = inputTempMin readonly = readonly>Temperature minimale : </p>
+        <p id = inputTempMax readonly = readonly>Temperature maximale : </p>
+    </div>
+    <div class = Pluie>
+        <p id = inputProbaPluie readonly = readonly> Probabilité de pluie : </p>
+    </div>
+    <div class = Soleil>
+        <p id = inputHeuresSoleil readonly = readonly>Ensoleillement : </p>
+    </div>
     <script src = "script.js"></script>
 </body>
 </html>
