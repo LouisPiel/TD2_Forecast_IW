@@ -21,7 +21,8 @@ let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee
             console.log(data);
 
                 document.getElementById("insee").innerHTML = data.city.name;
-                document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
+                document.getElementById("pluie").innerHTML = data.forecast[0].probarain+"%";
                 document.getElementById("tmin").innerHTML = data.forecast[0].tmin;
+                document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
             })
         );

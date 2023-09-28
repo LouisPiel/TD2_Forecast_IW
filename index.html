@@ -10,11 +10,20 @@
 <body>
 
     <section id = "affichageMeteo">
-        <h2 id="insee"> </h2> <br>
-        <div id = "temperature">
-            <p id="tmax"> </p>
-            <p>°C /</p>
+        <h2 id="insee"> </h2>
+        <div id="previsionPluie" class ="positionInfoMeteo">
+            <p> Prevision pluie: </p>
+            <p id="pluie"> </p> <br>
+            <p> Heures d'ensoleillement: </p>
+            <p id="heuresSoleil"> </p>
+            
+        </div>
+
+        <div id = "temperature" class="positionInfoMeteo">
+            
             <p id="tmin"> </p>
+            <p>°C /</p>
+            <p id="tmax"> </p>
             <p>°C</p>
         </div>
     </section>

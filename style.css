@@ -12,17 +12,25 @@ h2{
     text-align: center;
 }
 
-#temperature{
-
-    display: flex;
-    justify-content: center;
-}
 
 #affichageMeteo{
    
    background-color: darksalmon;
-   width: 300px;
+   width: 500px;
+   height: 500px;
    margin: auto;
    border: black solid 5px;
    border-radius: 10px;;
+}
+
+#previsionPluie{
+
+    height: 100px;
+}
+
+.positionInfoMeteo{
+
+    display: flex;
+    justify-content: center;
+
 }
