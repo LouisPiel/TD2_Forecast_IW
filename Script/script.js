@@ -58,20 +58,34 @@ let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee
 
 //main
 
-let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=27560');
-let villes = [];
-commune
-    .then((response) => response.text())
-    .then((text) => {
-        texteSeparer = text.split(",");
-        let compteur = 0;
-        let ville;
-        texteSeparer.forEach(element => {
-            if (compteur % 8 == 0) {
-                ville = element.split("\"");
-                villes.push(ville[3]);
-            }
-            compteur++;
+function retourneComune(cPostal){
+    let commune = fetch('https://geo.api.gouv.fr/communes?codePostal='+cPostal);
+    let listeDeroulante = document.getElementById("listeVilles");
+    commune
+        .then((response) => response.text())
+        .then((text) => {
+            texteSeparer = text.split(",");
+            let compteur = 0;
+            let ville;
+            texteSeparer.forEach(element => {
+                if (compteur % 8 == 0) {
+                    ville = element.split("\"");
+                    console.log(ville[3]);
+                    var option = document.createElement("option");
+                    let val=ville[3];
+                    option.value = val;
+                    option.text = val.charAt(0).toUpperCase() + val.slice(1);
+                    listeDeroulante.appendChild(option);
+                }
+                compteur++;
+            });
         });
-    });
-console.log(villes);
+}
+
+
+
+function affichage(){
+    retourneComune(document.getElementById("codePostalForm").value);
+}
+
+document.getElementById("codePostalForm").onchange = function() {affichage()};
