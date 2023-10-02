@@ -64,7 +64,6 @@ function changerImage()
 // Info Météo
 const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
 
-affichageMeteo();
 
 //main
 
