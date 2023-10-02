@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <header>
+        <h1>Météo</h1>
+    </header>
+
     <section id = "affichageMeteo">
         <h2 id="insee"> </h2>
         <div id="previsionPluie" class ="positionInfoMeteo">
@@ -27,51 +31,25 @@
             <p>°C</p>
         </div>
     </section>
-    <header>
-        <h1>Météo</h1>
-    </header>
+    <section id = "boiteEntrees">
     <form>
         <div class=codepostal>
-            <p id=codeP>Code postal :</p>
+            <p id= "codeP">Code postal :</p>
             <input type="text"  id = "codePostalForm" readonly>
         </div>
         <div class=ville>
-            <p id=villeCode>Ville : </p>
+            <p id="villeCode">Ville : </p>
             <input list="selectionner" readonly>
-            <datalist id=listeVille>
+            <datalist id="listeVille">
 
             </datalist>
         </div>
-        <div class=bouton>
+        <div class="bouton">
             <button id="boutonValider">Valider</button>
             <button id="boutonEffacer">Effacer</button>
         </div>
-        <div class="boiteResultats">
-            <div class="température resultats">
-                <p id="inputTempMin">
-                    Temperature minimale :
-                    <input type="text" readonly>
-                </p>
-                <p id="inputTempMax resultats">
-                    Temperature maximale :
-                    <input type="text" readonly>
-                </p>
-            </div>
-            <div class="Pluie resultats">
-                <p id="inputProbaPluie">
-                    Probabilité de pluie :
-                    <input type="text" readonly>
-                </p>
-            </div>
-            <div class="Soleil resultats">
-                <p id="inputHeuresSoleil">
-                    Ensoleillement :
-                    <input type="text" readonly>
-                </p>
-            </div>
-
-        </div>
     </form>
+</section>
       <script src="Script/script.js"></script>
 </body>
 
