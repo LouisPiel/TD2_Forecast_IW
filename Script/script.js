@@ -6,7 +6,10 @@ let ens = 60;
 document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
 
 //document.getElementById("boutonValider").addEventListener("click", remplirChamps()); 
-document.getElementById("boutonEffacer").addEventListener('click', viderChamps());  
+//document.getElementById("boutonEffacer").addEventListener('click', viderChamps());  
+
+document.getElementById("boutonEffacer").onclick = function () {viderChamps()};
+
 /*
 //Rempli les champs sur appui du bouton Valider
 function remplirChamps()
