@@ -44,23 +44,47 @@ function changerImage()
 }
 
 // Info Météo
-const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
+//const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
 
-affichageMeteo();
 
-function affichageMeteo() {
+//main
 
-    var codeInsee = 27367;
+function retourneComune(cPostal) {
+    let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=' + cPostal);
+    let listeDeroulante = document.getElementById("listeVilles");
+    listeDeroulante.length = 0;
+    commune
+        .then((response) => response.json())
+        .then((data) => {
+            if (data && data.length >= 1) {
+                data.forEach(valeur => {
+                    let option = document.createElement("option");
+                    option.textContent = valeur.nom;
+                    option.value = valeur.code;
+                    listeDeroulante.appendChild(option);
+                });
+            }
+        });
+}
 
-    let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=${codeInsee}`;
+function affichage() {
+    retourneComune(document.getElementById("codePostalForm").value);
+}
 
+document.getElementById("codePostalForm").onchange = function () { affichage() };
+
+// Info Météo
+
+function afficherMeteo(insee) {
+
+    const TOKEN = "4907b3646f1fff72cfb25ee1a2992ce42f03353e91d02343dd130309e1302042";
+    let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=` + insee;
 
     fetch(url).then(response =>
         response.json().then(data => {
 
             document.getElementById("insee").innerHTML = data.city.name;
             document.getElementById("pluie").innerHTML = data.forecast[0].probarain + "%";
-            document.getElementById("heuresSoleil").innerHTML = data.forecast[0].sun_hours;
             document.getElementById("tmin").innerHTML = data.forecast[0].tmin;
             document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
 
@@ -102,49 +126,6 @@ function affichageMeteo() {
                     document.getElementById("temps").innerHTML = "Orage";
                     break;
             }
-        })
-    );
-}
-//main
-
-function retourneComune(cPostal) {
-    let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=' + cPostal);
-    let listeDeroulante = document.getElementById("listeVilles");
-    listeDeroulante.length = 0;
-    commune
-        .then((response) => response.json())
-        .then((data) => {
-            if (data && data.length >= 1) {
-                data.forEach(valeur => {
-                    let option = document.createElement("option");
-                    option.textContent = valeur.nom;
-                    option.value = valeur.code;
-                    listeDeroulante.appendChild(option);
-                });
-            }
-        });
-}
-
-function affichage() {
-    retourneComune(document.getElementById("codePostalForm").value);
-}
-
-document.getElementById("codePostalForm").onchange = function () { affichage() };
-
-// Info Météo
-
-function afficherMeteo(insee) {
-
-    const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
-    let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=` + insee;
-
-    fetch(url).then(response =>
-        response.json().then(data => {
-
-            document.getElementById("insee").innerHTML = data.city.name;
-            document.getElementById("pluie").innerHTML = data.forecast[0].probarain + "%";
-            document.getElementById("tmin").innerHTML = data.forecast[0].tmin;
-            document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
         })
     );
 }
