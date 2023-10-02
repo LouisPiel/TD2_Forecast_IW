@@ -93,7 +93,6 @@ function affichageMeteo() {
         })
     );
 }
->>>>>>> origin/newHTML
 //main
 
 function retourneComune(cPostal) {
