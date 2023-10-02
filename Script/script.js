@@ -1,12 +1,11 @@
-let tempMin, tempMax, probaPluie, heuresSoleil; //Variables stockant le retour des APIs
+//let tempMin, tempMax, probaPluie, heuresSoleil; //Variables stockant le retour des APIs
+let cp, ville;
+let cpChamp = document.getElementById("codeP");
+let villeChamp = document.getElementById("codeVille");
 
-let chTempMin = document.getElementById("inputTempMin");    //Récupération des éléments de la page HTML
-let chTempMax = document.getElementById("inputTempMax")
-let chProbaPluie = document.getElementById("inputProbaPluie");
-let chHeuresSoleil = document.getElementById("inputHeuresSoleil");
-document.getElementById("boutonValider").addEventListener("click", remplirChamps);
+//document.getElementById("boutonValider").addEventListener("click", remplirChamps);
 document.getElementById("boutonEffacer").addEventListener("click", viderChamps);  
-
+/*
 //Rempli les champs sur appui du bouton Valider
 function remplirChamps()
 {
@@ -15,7 +14,7 @@ function remplirChamps()
     chTempMax.textContent = tempMax + " °C";
     chProbaPluie.textContent = probaPluie + " %";
     chHeuresSoleil.textContent = heuresSoleil + "h";
-}
+}*/
 
 //Vide les champs sur appui du bouton Effacer
 function viderChamps()
@@ -24,24 +23,10 @@ function viderChamps()
     chTempMax.textContent = "";
     chProbaPluie.textContent = "";
     chHeuresSoleil.textContent = "";
-    tempMin, tempMax, probaPluie, heuresSoleil = "";
+    //tempMin, tempMax, probaPluie, heuresSoleil = "";
 }
 // Info Météo
 const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
-
-/*document.querySelector('#codepostal').addEventListener('input', function() {
-
-    if(this.value.length == 5){
-    let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=${this.value}`;
-
-    fetch(url).then(response => 
-        response.json().then(data => {
-            console.log(data);
-                document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
-            })
-        );
-    }
-});*/
 
 let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=61100`;
 
