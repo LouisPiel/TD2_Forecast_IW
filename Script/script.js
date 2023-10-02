@@ -1,9 +1,8 @@
-//let tempMin, tempMax, probaPluie, heuresSoleil; //Variables stockant le retour des APIs
-//let cp, ville;
 let cpChamp = document.getElementById("codePostalForm");
-//let villeChamp = document.getElementById("codeVille");
 let ens = 60;
 document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
+
+document.getElementById("codePostalForm").onchange = function () { affichage() };
 
 //document.getElementById("boutonEffacer").onclick = function () {viderChamps()};
 //document.getElementById("boutonEffacer").addEventListener('click',viderChamps);
@@ -13,8 +12,19 @@ document.getElementById("boutonEffacer").addEventListener('click', function() {
     cpChamp.value = '';
     cpChamp.textContent = '';
     affichage();
+    document.getElementById("insee").innerHTML = "";
+    document.getElementById("pluie").innerHTML ="";
+    document.getElementById("tmin").innerHTML ="";
+    document.getElementById("tmax").innerHTML ="";
+    document.getElementById("temps").innerHTML = "";
   });
 
+
+  document.getElementById("listeVilles").onchange = function () {
+    let selectElmt = document.getElementById("listeVilles");
+    let valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+    afficherMeteo(valeurselectionnee);
+}
 /*function viderChamps()
 {
     console.log("viderChamps");
@@ -53,6 +63,7 @@ function retourneComune(cPostal) {
     let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=' + cPostal);
     let listeDeroulante = document.getElementById("listeVilles");
     listeDeroulante.length = 0;
+    let compteur=1;
     commune
         .then((response) => response.json())
         .then((data) => {
@@ -62,16 +73,23 @@ function retourneComune(cPostal) {
                     option.textContent = valeur.nom;
                     option.value = valeur.code;
                     listeDeroulante.appendChild(option);
+                    if(compteur==1){
+                        let selectElmt = document.getElementById("listeVilles");
+                        let valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+                        afficherMeteo(valeurselectionnee);
+                        compteur++;
+                    }
                 });
             }
         });
+        
+   
 }
+
 
 function affichage() {
     retourneComune(document.getElementById("codePostalForm").value);
 }
-
-document.getElementById("codePostalForm").onchange = function () { affichage() };
 
 // Info Météo
 
@@ -128,10 +146,4 @@ function afficherMeteo(insee) {
             }
         })
     );
-}
-
-document.getElementById("listeVilles").onchange = function () {
-    var selectElmt = document.getElementById("listeVilles");
-    var valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
-    afficherMeteo(valeurselectionnee);
 }
