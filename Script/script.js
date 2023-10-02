@@ -10,42 +10,27 @@ document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
 
 //document.getElementById("boutonEffacer").onclick = function () {viderChamps()};
 //document.getElementById("boutonEffacer").addEventListener('click',viderChamps);
-document.getElementById("boutonEffacer").addEventListener('click', function() {
-    console.log("viderChamps");
-
-    cpChamp.value = '';
-    cpChamp.textContent = '';
-    changerImage();
-  })
-
-
-/*
-//Rempli les champs sur appui du bouton Valider
-function remplirChamps()
-{
-    //TO DO : Récupérer les valeurs venant des APIs
-    chTempMin.textContent = tempMin + " °C";
-    chTempMax.textContent = tempMax + " °C";
-    chProbaPluie.textContent = probaPluie + " %";
-    chHeuresSoleil.textContent = heuresSoleil + "h";
-}*/
 
 //Vide les champs sur appui du bouton Effacer
-function viderChamps()
+document.getElementById("boutonEffacer").addEventListener('click', function() {
+    cpChamp.value = '';
+    cpChamp.textContent = '';
+    affichage();
+  });
+
+/*function viderChamps()
 {
     console.log("viderChamps");
 
     cpChamp.value = '';
     cpChamp.textContent = '';
     changerImage();
-}
+}*/
 
 function changerImage()
 {
-    //let x = element.getElementsByTagName("img").item(0);
-    //let v = x.getAttribute("src");
     console.log("ChangerImage " + ens);
-    if(ens > 50)
+    if(ens > 50) //TO DO Changer la condition à "ensoleillement et pprévisions pluie"
     {
         document.body.style.backgroundImage = "url('Images/ciel_pluie.jpg')";
         console.log("pluie " + ens);
