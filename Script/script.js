@@ -1,10 +1,12 @@
 //let tempMin, tempMax, probaPluie, heuresSoleil; //Variables stockant le retour des APIs
-let cp, ville;
-let cpChamp = document.getElementById("codeP");
-let villeChamp = document.getElementById("codeVille");
+//let cp, ville;
+let cpChamp = document.getElementById("codePostalForm");
+//let villeChamp = document.getElementById("codeVille");
+let ens = 60;
+document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
 
-//document.getElementById("boutonValider").addEventListener("click", remplirChamps);
-document.getElementById("boutonEffacer").addEventListener("click", viderChamps);  
+//document.getElementById("boutonValider").addEventListener("click", remplirChamps()); 
+document.getElementById("boutonEffacer").addEventListener('click', viderChamps());  
 /*
 //Rempli les champs sur appui du bouton Valider
 function remplirChamps()
@@ -19,13 +21,34 @@ function remplirChamps()
 //Vide les champs sur appui du bouton Effacer
 function viderChamps()
 {
-    /*chTempMin.textContent = "";
-    chTempMax.textContent = "";
-    chProbaPluie.textContent = "";
-    chHeuresSoleil.textContent = "";*/
-    cpChamp.textContent = "";
-    //tempMin, tempMax, probaPluie, heuresSoleil = "";
+    console.log("viderChamps");
+
+    cpChamp.value = '';
+    cpChamp.textContent = '';
+    changerImage();
 }
+
+function changerImage()
+{
+    //let x = element.getElementsByTagName("img").item(0);
+    //let v = x.getAttribute("src");
+    console.log("ChangerImage " + ens);
+    if(ens > 50)
+    {
+        document.body.style.backgroundImage = "url('Images/ciel_pluie.jpg')";
+        console.log("pluie " + ens);
+        ens = 40;
+        console.log("pluie " + ens);
+    }
+    else
+    {
+        document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
+        console.log("ciel bleu " + ens);
+        ens = 60;
+        console.log("ciel bleu " + ens);
+    }
+}
+
 // Info Météo
 const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
 

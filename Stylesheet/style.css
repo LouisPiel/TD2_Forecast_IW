@@ -47,9 +47,8 @@ p{
 
 #affichageMeteo{
    text-align: center;
-   background-color: rgba(88, 217, 240, 0.938);
    height:min-content;
-   padding-bottom: 15px;
+   padding-bottom: 25px;
    border: black solid 5px;
    border-radius: 10px;
    margin-left: 30%;
@@ -67,6 +66,11 @@ p{
     margin-bottom: 5%;
 }
 
+#boiteEntrees, #affichageMeteo
+{
+   background-color: rgba(119, 223, 255, 0.938);
+}
+
 #previsionPluie{
     margin-bottom: 20px;
 }
@@ -77,13 +81,18 @@ p{
     font-weight:normal;
 }
 
+form{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 button
 {
     color: black;
-    font-size:20px;
+    font-size:18px;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /*.positionInfoMeteo{
