@@ -19,10 +19,11 @@ function remplirChamps()
 //Vide les champs sur appui du bouton Effacer
 function viderChamps()
 {
-    chTempMin.textContent = "";
+    /*chTempMin.textContent = "";
     chTempMax.textContent = "";
     chProbaPluie.textContent = "";
-    chHeuresSoleil.textContent = "";
+    chHeuresSoleil.textContent = "";*/
+    cpChamp.textContent = "";
     //tempMin, tempMax, probaPluie, heuresSoleil = "";
 }
 // Info Météo

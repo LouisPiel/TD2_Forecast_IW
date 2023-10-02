@@ -2,39 +2,63 @@ h1, .bouton{
     text-align: center;
 }
 
+h2
+{
+    color: white;
+    text-shadow: 2px 2px #000000;
+    font-size:45px;
+    text-align: center;
+}
+
 .boiteResultats
 {
     margin-right:40%;
     margin-left:35%;
 }
 
-input{
+input, select{
     float :right;
+    min-width: 170px;
+}
+
+.elementForm
+{
+    margin-bottom: 10px;
 }
 
 p{
-    /*display: inline;*/
+    display: inline;
+    text-align: center;
+}
+
+#affichageMeteo p{
     color: white;
     font-size:30px;
     font-weight:bolder;
     display: inline;
     text-align: center;
-
 }
-
-h2{
-    text-align: center;
-}
-
 
 #affichageMeteo{
    text-align: center;
    background-color: rgb(101, 203, 221);
-   width: 500px;
    height:min-content;
    padding-bottom: 15px;
    border: black solid 5px;
    border-radius: 10px;;
+   margin-left: 30%;
+   margin-right: 30%;
+}
+
+#boiteEntrees
+{
+    border-radius: 10px;
+    border: black solid 5px;
+    padding: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #previsionPluie{
@@ -48,17 +72,13 @@ h2{
     font-weight:normal;
 }
 
-#boiteEntrees
-{
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 5%;
-}
-
 button
 {
     color: black;
     font-size:20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*.positionInfoMeteo{
