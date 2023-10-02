@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Instant Weather</title>
 </head>
-<body>
 
+<body>
     <section id = "affichageMeteo">
         <h2 id="insee"> </h2>
         <div id="previsionPluie" class ="positionInfoMeteo">
@@ -27,6 +27,52 @@
             <p>°C</p>
         </div>
     </section>
-    
+    <header>
+        <h1>Météo</h1>
+    </header>
+    <form>
+        <div class=codepostal>
+            <p id=codeP>Code postal :</p>
+            <input type="text"  id = "codePostalForm" readonly>
+        </div>
+        <div class=ville>
+            <p id=villeCode>Ville : </p>
+            <input list="selectionner" readonly>
+            <datalist id=listeVille>
+
+            </datalist>
+        </div>
+        <div class=bouton>
+            <button id=boutonValider>
+
+            </button>
+            <button id=boutonEffacer>
+            </button>
+        </div>
+        <div class=température>
+            <p id=inputTempMin>
+                Temperature minimale :
+                <input type="text" readonly>
+            </p>
+            <p id=inputTempMax>
+                Temperature maximale :
+                <input type="text" readonly>
+            </p>
+        </div>
+        <div class=Pluie>
+            <p id=inputProbaPluie>
+                Probabilité de pluie :
+                <input type="text" readonly>
+            </p>
+        </div>
+        <div class=Soleil>
+            <p id=inputHeuresSoleil>
+                Ensoleillement :
+                <input type="text" readonly>
+            </p>
+        </div>
+    </form>
+    <script src="script.js"></script>
 </body>
+
 </html>
