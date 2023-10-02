@@ -34,15 +34,15 @@
     <section id = "boiteEntrees">
     <form>
         <div class=codepostal>
-            <p id= "codeP">Code postal :</p>
-            <input type="text"  id = "codePostalForm" readonly>
+            <label for = "codePostalForm">Code postal :</label>
+            <input type="text"  id = "codePostalForm">
         </div>
         <div class=ville>
             <p id="villeCode">Ville : </p>
-            <input list="selectionner" readonly>
-            <datalist id="listeVille">
-
-            </datalist>
+            <label for = "listeVilles">Ville : </label>
+            <select id="listeVilles">
+                <option value="none">Veuillez entrer un code postale puis changer la ville ici</option>
+            </select>
         </div>
         <div class="bouton">
             <button id="boutonValider">Valider</button>
