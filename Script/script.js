@@ -20,6 +20,7 @@ function viderChamps() {
 function retourneComune(cPostal) {
     let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=' + cPostal);
     let listeDeroulante = document.getElementById("listeVilles");
+    listeDeroulante.length=1;
     commune
         .then((response) => response.json())
         .then((data) => {
