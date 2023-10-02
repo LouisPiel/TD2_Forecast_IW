@@ -38,7 +38,6 @@ let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee
 
                     case 0: 
                         document.getElementById("temps").innerHTML = "Ensoleillé"; 
-
                     break;
                     
                     case 1: 
@@ -51,13 +50,10 @@ let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee
                     case (x >= 6) && (x <= 7): 
                         document.getElementById("temps").innerHTML = "Brouillard"; 
                     break;
-
-                    
-
+ 
                     case (x >= 10) && (x <= 12): 
                         document.getElementById("temps").innerHTML = "Pluie"; 
                     break;
-
 
                     case (x >= 20) && (x <= 22): 
                         document.getElementById("temps").innerHTML = "Neige";
