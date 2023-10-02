@@ -64,20 +64,6 @@ function changerImage()
 // Info Météo
 const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
 
-/*document.querySelector('#codepostal').addEventListener('input', function() {
-
-    if(this.value.length == 5){
-    let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=${this.value}`;
-
-    fetch(url).then(response => 
-        response.json().then(data => {
-            console.log(data);
-                document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
-            })
-        );
-    }
-});*/
-
 affichageMeteo();
 
 function affichageMeteo() {
@@ -142,7 +128,7 @@ function affichageMeteo() {
 function retourneComune(cPostal) {
     let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=' + cPostal);
     let listeDeroulante = document.getElementById("listeVilles");
-    listeDeroulante.length = 1;
+    listeDeroulante.length = 0;
     commune
         .then((response) => response.json())
         .then((data) => {
