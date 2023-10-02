@@ -4,50 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Stylesheet/style.css" />
+    <link rel="stylesheet" href="./Stylesheet/style.css" />
     <title>Instant Weather</title>
 </head>
+
 <body>
+    
     <header>
         <h1>Météo</h1>
     </header>
-    <section id = "affichageMeteo">
+
+    <section id="affichageMeteo">
         <h2 id="insee"> </h2>
-        <div id="previsionPluie" class ="positionInfoMeteo">
+        <div id="previsionPluie" class="positionInfoMeteo">
             <p> Prevision pluie: </p>
             <p id="pluie"> </p> <br>
             <p> Heures d'ensoleillement: </p>
             <p id="heuresSoleil"> </p>
         </div>
 
-        <div id = "temperature" class="positionInfoMeteo">
-            
+        <div id="temperature" class="positionInfoMeteo">
+
             <p id="tmin"> </p>
             <p>°C /</p>
             <p id="tmax"> </p>
             <p>°C</p>
         </div>
     </section>
-    <section id = "boiteEntrees">
+
+    
+    <section id="boiteEntrees">
         <form>
             <div class="codepostal">
                 <p id="codeP" class="entree">Code postal :</p>
-                <input type="text"  id = "codePostalForm">
+                <input type="text" id="codePostalForm">
             </div>
+
             <div class="ville">
-                <p id="codeVille" class="entree">Ville : </p>
-                <select>Choisir Ville</select>
-                <!--<input list="selectionner">
-                <datalist id="listeVille">
-                </datalist>-->
+                <p id="villeCode">Ville : </p>
+                <select id="listeVilles">
+                    <option value="none">Veuillez entrer un code postale puis changer la ville ici</option>
+                </select>
             </div>
+
             <div class=bouton>
                 <button id="boutonValider">Valider</button>
                 <button id="boutonEffacer">Effacer</button>
             </div>
         </form>
-    </section>
-    <script src="Script/script.js"></script>
+        <script src="./Script/script.js"></script>
 </body>
 
 </html>
