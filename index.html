@@ -19,7 +19,9 @@
     </header>
     <!--Balise Section pour l'affichage météo-->
     <section id = "affichageMeteo">
+
         <h2 id="insee"> </h2>
+        <!--Element division qui permet d'afficher la prévision de la pluie et les heures d'ensoleillement-->
         <div id="previsionPluie" class ="positionInfoMeteo">
             <p> Prevision pluie: </p>
             <p id="pluie"> </p> <br>
@@ -27,10 +29,9 @@
             <p id="heuresSoleil"> </p><br>
             <p>Temps:</p> 
             <p id ="temps"> </p>
+         </div>
 
-            
-        </div>
-
+         <!--Element division qui permet d'afficher les temperatures min et max-->
         <div id = "temperature" class="positionInfoMeteo">
             
             <p id="tmin"> </p>
@@ -39,25 +40,30 @@
             <p>°C</p>
         </div>
     </section>
+    <!--Balise Section pour le code postal et la ville-->
     <section id = "boiteEntrees">
     <form>
+        <!--Element division pour afficher le code postal-->
         <div class=codepostal>
             <label for = "codePostalForm">Code postal :</label>
             <input type="text"  id = "codePostalForm">
         </div>
-        <div class=ville>
+        <!--Element division pour l'affichage de la ville par un déroulement de listes-->
+        <div class="ville">
             <p id="villeCode">Ville : </p>
             <label for = "listeVilles">Ville : </label>
             <select id="listeVilles">
                 <option value="none">Veuillez entrer un code postale puis changer la ville ici</option>
             </select>
         </div>
+        <!--Element division pour valider un choix de ville ou pour effacer les informations de la météo à l'écran de la ville qu'on avait choisi précédemment-->
         <div class="bouton">
             <button id="boutonValider">Valider</button>
             <button id="boutonEffacer">Effacer</button>
         </div>
     </form>
 </section>
+        <!--Lien pour le JS-->
       <script src="Script/script.js"></script>
 </body>
 
