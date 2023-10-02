@@ -1,4 +1,4 @@
-h1, p, .bouton{
+h1, .bouton{
     text-align: center;
 }
 
@@ -10,4 +10,38 @@ h1, p, .bouton{
 
 input{
     float :right;
+}p{
+    /*display: inline;*/
+    color: white;
+    font-size:30px;
+    font-weight:bolder;
+    display: inline;
+    text-align: center;
+
 }
+
+h2{
+    text-align: center;
+}
+
+
+#affichageMeteo{
+   
+   background-color: darksalmon;
+   width: 500px;
+   height: 500px;
+   border: black solid 5px;
+   border-radius: 10px;;
+}
+
+#previsionPluie{
+
+    height: 100px;
+}
+
+/*.positionInfoMeteo{
+
+    display: flex;
+    justify-content: center;
+
+}*
