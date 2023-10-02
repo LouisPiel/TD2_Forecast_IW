@@ -153,7 +153,7 @@ document.getElementById("codePostalForm").onchange = function () { affichage() }
 
 function afficherMeteo(insee) {
 
-    const TOKEN = "9d76f6257b5f1548b921b4da509451064d8ed18f90dd162fd27827167ff4138f";
+    const TOKEN = "4907b3646f1fff72cfb25ee1a2992ce42f03353e91d02343dd130309e1302042";
     let url = `https://api.meteo-concept.com/api/forecast/daily?token=${TOKEN}&insee=` + insee;
 
     fetch(url).then(response =>
