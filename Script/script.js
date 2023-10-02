@@ -30,7 +30,6 @@ function retourneComune(cPostal) {
                     option.textContent = valeur.nom;
                     option.value = valeur.code;
                     listeDeroulante.appendChild(option);
-                    console.log("ville " + option.textContent + " insee " + option.value);
                 });
             }
         });
@@ -51,7 +50,6 @@ function afficherMeteo(insee) {
 
     fetch(url).then(response =>
         response.json().then(data => {
-            console.log(data);
 
             document.getElementById("insee").innerHTML = data.city.name;
             document.getElementById("pluie").innerHTML = data.forecast[0].probarain + "%";
