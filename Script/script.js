@@ -8,7 +8,16 @@ document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
 //document.getElementById("boutonValider").addEventListener("click", remplirChamps()); 
 //document.getElementById("boutonEffacer").addEventListener('click', viderChamps());  
 
-document.getElementById("boutonEffacer").onclick = function () {viderChamps()};
+//document.getElementById("boutonEffacer").onclick = function () {viderChamps()};
+//document.getElementById("boutonEffacer").addEventListener('click',viderChamps);
+document.getElementById("boutonEffacer").addEventListener('click', function() {
+    console.log("viderChamps");
+
+    cpChamp.value = '';
+    cpChamp.textContent = '';
+    changerImage();
+  })
+
 
 /*
 //Rempli les champs sur appui du bouton Valider
