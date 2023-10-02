@@ -1,30 +1,42 @@
 <!DOCTYPE html>
+<!--Langue déclaré en français pour spécifier le contenu textuel-->
 <html lang="fr">
 
 <head>
+    <!--Permet de mettre les caractères-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="./Stylesheet/style.css" />
+
     <title>Instant Weather</title>
 </head>
 
 <body>
-    
+
+    <!--Balise pour le titre de la page-->
     <header>
         <h1>Météo</h1>
     </header>
+    <!--Balise Section pour l'affichage météo-->
+    <section id = "affichageMeteo">
 
-    <section id="affichageMeteo">
+
         <h2 id="insee"> </h2>
-        <div id="previsionPluie" class="positionInfoMeteo">
+        <!--Element division qui permet d'afficher la prévision de la pluie et les heures d'ensoleillement-->
+        <div id="previsionPluie" class ="positionInfoMeteo">
             <p> Prevision pluie: </p>
             <p id="pluie"> </p> <br>
-            <p> Heures d'ensoleillement: </p>
-            <p id="heuresSoleil"> </p>
-        </div>
+            <p> Heures d'Ensoleillement: </p>
+            <p id="heuresSoleil"> </p><br>
+            <p>Temps:</p> 
+            <p id ="temps"> </p>
+         </div>
 
-        <div id="temperature" class="positionInfoMeteo">
-
+         <!--Element division qui permet d'afficher les temperatures min et max-->
+        <div id = "temperature" class="positionInfoMeteo">
+            
             <p id="tmin"> </p>
             <p>°C /</p>
             <p id="tmax"> </p>
@@ -33,25 +45,31 @@
     </section>
 
     
-    <section id="boiteEntrees">
-        <form>
-            <div class="codepostal">
-                <p id="codeP" class="entree">Code postal :</p>
-                <input type="text" id="codePostalForm">
-            </div>
+    <!--Balise Section pour le code postal et la ville-->
+    <section id = "boiteEntrees">
+    <form>
+        <!--Element division pour afficher le code postal-->
+        <div class="codepostal">
+            <label for = "codePostalForm">Code postal :</label>
+            <input type="text"  id = "codePostalForm">
+        </div>
+        <!--Element division pour l'affichage de la ville par un déroulement de listes-->
+        <div class="ville">
+            <p id="villeCode">Ville : </p>
+            <label for = "listeVilles">Ville : </label>
+            <select id="listeVilles">
+                <option value="none">Veuillez entrer un code postale puis changer la ville ici</option>
+            </select>
+        </div>
+        <!--Element division pour valider un choix de ville ou pour effacer les informations de la météo à l'écran de la ville qu'on avait choisi précédemment-->
+        <div class="bouton">
+            <button id="boutonEffacer">Effacer</button>
+        </div>
+    </form>
+</section>
+        <!--Lien pour le JS-->
+      <script src="Script/script.js"></script>
 
-            <div class="ville">
-                <p id="villeCode">Ville : </p>
-                <select id="listeVilles">
-                    <option value="none" select="selected">Veuillez entrer un code postale valide puis changer la ville ici</option>
-                </select>
-            </div>
-
-            <div class=bouton>
-                <button id="boutonEffacer">Effacer</button>
-            </div>
-        </form>
-        <script src="./Script/script.js"></script>
 </body>
 
 </html>
