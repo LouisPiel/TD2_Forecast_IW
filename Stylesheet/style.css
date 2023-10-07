@@ -1,62 +1,59 @@
-h1, .bouton{
+h1,
+.bouton {
     text-align: center;
 }
 
-h1
-{
+h1 {
     font-size: 60px;
 }
 
-h2
-{
+h2 {
     color: white;
     text-shadow: 2px 2px #000000;
-    font-size:45px;
+    font-size: 45px;
     text-align: center;
 }
 
-.boiteResultats
-{
-    margin-right:40%;
-    margin-left:35%;
+.boiteResultats {
+    margin-right: 40%;
+    margin-left: 35%;
 }
 
-input, select{
-    float :right;
+input,
+select {
+    float: right;
     padding: 0%;
     min-width: 170px;
 }
 
-.elementForm
-{
+.elementForm {
     margin-bottom: 10px;
 }
 
-p{
+p {
     display: inline;
     text-align: center;
 }
 
-#affichageMeteo p{
+#affichageMeteo p {
     color: white;
-    font-size:30px;
-    font-weight:bolder;
+    font-size: 30px;
+    font-weight: bolder;
     display: inline;
     text-align: center;
 }
 
-#affichageMeteo{
-   text-align: center;
-   height:min-content;
-   padding-bottom: 25px;
-   border: black solid 5px;
-   border-radius: 10px;
-   margin-left: 30%;
-   margin-right: 30%;
+#affichageMeteo {
+    text-align: center;
+    height: min-content;
+    padding-bottom: 25px;
+    border: black solid 5px;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
-#boiteEntrees
-{
+#boiteEntrees {
     border-radius: 10px;
     border: black solid 5px;
     padding: 25px 20px 20px 20px;
@@ -66,30 +63,29 @@ p{
     margin-bottom: 5%;
 }
 
-#boiteEntrees, #affichageMeteo
-{
-   background-color: rgba(119, 223, 255, 0.938);
+#boiteEntrees,
+#affichageMeteo {
+    background-color: rgba(119, 223, 255, 0.938);
 }
 
-#previsionPluie{
+#previsionPluie {
     margin-bottom: 20px;
 }
 
-.entree{
+.entree {
     color: black;
-    font-size:20px;
-    font-weight:normal;
+    font-size: 20px;
+    font-weight: normal;
 }
 
-form{
+form {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-button
-{
+button {
     color: black;
-    font-size:18px;
+    font-size: 18px;
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;

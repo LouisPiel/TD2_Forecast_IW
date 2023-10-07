@@ -8,19 +8,19 @@ document.getElementById("codePostalForm").onchange = function () { affichage() }
 //document.getElementById("boutonEffacer").addEventListener('click',viderChamps);
 
 //Vide les champs sur appui du bouton Effacer
-document.getElementById("boutonEffacer").addEventListener('click', function() {
+document.getElementById("boutonEffacer").addEventListener('click', function () {
     cpChamp.value = '';
     cpChamp.textContent = '';
     affichage();
     document.getElementById("insee").innerHTML = "";
-    document.getElementById("pluie").innerHTML ="";
-    document.getElementById("tmin").innerHTML ="";
-    document.getElementById("tmax").innerHTML ="";
+    document.getElementById("pluie").innerHTML = "";
+    document.getElementById("tmin").innerHTML = "";
+    document.getElementById("tmax").innerHTML = "";
     document.getElementById("temps").innerHTML = "";
-  });
+});
 
 
-  document.getElementById("listeVilles").onchange = function () {
+document.getElementById("listeVilles").onchange = function () {
     let selectElmt = document.getElementById("listeVilles");
     let valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
     afficherMeteo(valeurselectionnee);
@@ -34,18 +34,16 @@ document.getElementById("boutonEffacer").addEventListener('click', function() {
     changerImage();
 }*/
 
-function changerImage()
-{
+function changerImage() {
     console.log("ChangerImage " + ens);
-    if(ens > 50) //TO DO Changer la condition à "ensoleillement et pprévisions pluie"
+    if (ens > 50) //TO DO Changer la condition à "ensoleillement et pprévisions pluie"
     {
         document.body.style.backgroundImage = "url('Images/ciel_pluie.jpg')";
         console.log("pluie " + ens);
         ens = 40;
         console.log("pluie " + ens);
     }
-    else
-    {
+    else {
         document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
         console.log("ciel bleu " + ens);
         ens = 60;
@@ -63,7 +61,7 @@ function retourneComune(cPostal) {
     let commune = fetch('https://geo.api.gouv.fr/communes?codePostal=' + cPostal);
     let listeDeroulante = document.getElementById("listeVilles");
     listeDeroulante.length = 0;
-    let compteur=1;
+    let compteur = 1;
     commune
         .then((response) => response.json())
         .then((data) => {
@@ -73,7 +71,7 @@ function retourneComune(cPostal) {
                     option.textContent = valeur.nom;
                     option.value = valeur.code;
                     listeDeroulante.appendChild(option);
-                    if(compteur==1){
+                    if (compteur == 1) {
                         let selectElmt = document.getElementById("listeVilles");
                         let valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
                         afficherMeteo(valeurselectionnee);
@@ -82,8 +80,8 @@ function retourneComune(cPostal) {
                 });
             }
         });
-        
-   
+
+
 }
 
 
