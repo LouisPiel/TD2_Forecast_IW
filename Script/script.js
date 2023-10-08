@@ -59,7 +59,6 @@ function retourneCommune(cPostal) {
                         let selectElmt = document.getElementById("listeVilles");
                         let valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
                         afficherMeteo(valeurselectionnee);
-                        changerImage();
                         compteur++;
                     }
                 });
