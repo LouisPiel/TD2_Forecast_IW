@@ -105,9 +105,6 @@ function afficherMeteo(insee) {
             document.getElementById("tmax").innerHTML = data.forecast[0].tmax;
 
             var x = data.forecast[0].weather
-
-            console.log(data);
-            console.log("Hello"+x);
             switch (true) {
 
                 case (x == 0):
