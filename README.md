@@ -12,3 +12,13 @@ on a la météo de la ville que l'on a choisi.
 # Le site affiche quelles informations?
 
 Le site affiche les prévisions pluie, les heures d'ensoleillement, le temps et les températures minimales et maximales.
+
+# Les API utilisées :
+
+ Pour API de découpage administratif par commune, on a utilisé ce site : https://geo.api.gouv.fr/decoupage-administratif/communes
+ Pour l'API météo de MétéoConcept, on a utilisé ce site : https://api.meteo-concept.com/
+
+# Remerciments
+Devloppeurs : Lukas Siopathis, Hugo Séfrioui, Louis Piel, Jean Guideau. Elèves de 2nde année de BUT Informatique à Caen
+Professeur référent : Christophe Vallot
+
