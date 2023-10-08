@@ -14,7 +14,7 @@ Il est possible à tout instant d'effacer les valeurs saisies grâce au bouton d
 # Quelles informations sont affichées par le site ?
 
 Le site affiche les prévisions de pluie, les heures d'ensoleillement, le temps et les températures minimales et maximales.
-Une icône et l'arrière plan de l'application changent en fonction de la météo de la ville donnée. Par exempple si il y a du soleil, alors l'icône sera celui du soleil et le font représentant le ciel sera "ensoleillé".
+Une icône et l'arrière plan de l'application changent en fonction de la météo de la ville donnée. Par exemple si il y a du soleil, alors l'icône sera celui du soleil et le font représentant le ciel sera "ensoleillé".
 
 # Les API utilisées :
 
