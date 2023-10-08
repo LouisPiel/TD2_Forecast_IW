@@ -5,8 +5,8 @@
  */
 let cpChamp = document.getElementById("codePostalForm");
 document.body.style.backgroundImage = "url('Images/ciel_bleu.jpg')";
-document.body.style.backgroundSize="cover";
-document.body.style.backgroundPosition="center center";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
 
 document.getElementById("codePostalForm").onchange = function () { affichage() };
 //let ens = 60;
